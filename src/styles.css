@@ -56,6 +56,10 @@ del {
 	text-decoration: line-through;
 }
 
+a {
+	text-decoration: none;
+}
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -71,8 +75,59 @@ table {
   clear: both;
 }
 
+nav {
+	background-color: #fff;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+}
+
+nav img {
+	width: 10em;
+	top: 20px;
+	left: 50px;
+	position: absolute;
+}
+
+.nav-links {
+	float: right;
+}
+
+.nav-links > li {
+	float: left;
+}
+
+.nav-links > li > a {
+	padding: 25px 0px;
+	width: 150px;
+	border-left: 1px solid #ada791;
+	float:left;
+}
+
+.nav-links > li:first-child > a {
+	border-left: none;
+}
+
+nav li a {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #766e65;
+	text-transform: uppercase;
+	font-size: 1em;
+	text-align: center;
+	transition: 0.15s background-color linear;
+}
+
+nav li a:focus,
+nav li a:hover,
+nav li a:active {
+	background-color: #eb2428;
+	color: #fff;
+}
+
 .header {
 	background-color: #DCDCDC;
+	margin-top: 50px;
 }
 
 .header h1 {
@@ -115,7 +170,6 @@ span {
 
 .header__go-premium a {
 	display: block;
-	text-decoration: none;
 }
 
 .header__go-premium__action-button {
@@ -215,7 +269,7 @@ span {
   margin: 2em;
 }
 
-img {
+a img {
   width: 10em;
   height: 10em;
 }
