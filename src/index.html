@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>Sharks</title>
     <link rel="stylesheet" href="styles.css"/>
   </head>
@@ -8,19 +10,20 @@
     <nav class="nav-layout grouping">
       <figure>
         <img src="images/logo.png" alt="cars"/>
-        <ul class="nav-links">
-          <li><a href="#">HOME</a></li>
-          <li class="has-submenu"><a href="#">MOVIES</a>
-            <ul>
-              <li><a href="#">First</a></li>
-              <li><a href="#">Second</a></li>
-              <li><a href="#">Third</a></li>
-            </ul>
-          </li>
-          <li><a href="#">SPECIES</a></li>
-          <li><a href="#">CHUM</a></li>
-        </ul>
       </figure>
+      <div class="mobile-menu-icon"></div>
+      <ul class="nav-links">
+        <li><a href="#">HOME</a></li>
+        <li class="has-submenu"><a href="#">MOVIES</a>
+          <ul>
+            <li><a href="#">First</a></li>
+            <li><a href="#">Second</a></li>
+            <li><a href="#">Third</a></li>
+          </ul>
+        </li>
+        <li><a href="#">SPECIES</a></li>
+        <li><a href="#">CHUM</a></li>
+      </ul>
     </nav>
     <section class="header grouping">
       <div id="header" class="wrapper">
@@ -75,6 +78,8 @@
         <h1>Footer</h1>
       </div>
     </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="bundle.js"></script>
   </body>
 </html>

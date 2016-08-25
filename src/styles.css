@@ -141,12 +141,10 @@ nav img {
 
 .has-submenu:hover ul {
 	display: block;
-	-webkit-animation-name: slideDown;
-	-webkit-animation-duration: .55s;
-	-webkit-animation-timing-function: ease;
+	animation: slideDown .55s ease;
 }
 
-@-webkit-keyframes slideDown {
+@keyframes slideDown {
 	0% {transform: translateY(-100%); opacity: 0;}
 	95% {transform: translateY(10%);}
 	100% {transform: translateY(0%); opacity: 1;}
@@ -173,6 +171,19 @@ nav li a:hover,
 nav li a:active {
 	background-color: #eb2428;
 	color: #fff;
+}
+
+.mobile-menu-icon {
+	background: url('images/nav.png') 0 0 no-repeat;
+	width: 30px;
+	height: 30px;
+	float: right;
+	margin: 10px 10px 0 0;
+	cursor: pointer;
+}
+
+.mobile-menu-icon.open {
+	background-image: url('images/cross.png')
 }
 
 .header {
@@ -290,4 +301,72 @@ nav li a:active {
 
 .footer {
   margin: 2em;
+}
+
+@media screen and (max-width: 1023px) {
+	.header__description {
+		float: none;
+		width: auto;
+		margin: 20px 3%;
+	}
+
+	.header__go-premium {
+		float: none;
+		width: auto;
+	}
+
+	.content-block {
+		float: none;
+		width: auto;
+		margin-top: 20px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	nav {
+		position: absolute;
+	}
+
+	.nav-links {
+		width: 100%;
+		max-height: 0;
+		overflow: hidden;
+		transition: .35s all ease-in-out;
+	}
+
+	.nav-links.active {
+		max-height: 350px;
+	}
+
+	.nav-links > li {
+		float:right;
+		width: 100%;
+	}
+
+	.nav-links li a {
+		text-align: right;
+		padding: 15px 25px 15px 0px;
+		width: 100%;
+		border-bottom: 1px solid #959271;
+		border-left: none;
+		font-size: 13px;
+	}
+
+	nav img {
+		width: 100px;
+		top 0;
+		left: 20px;
+	}
+
+	.has-submenu ul {
+		position: static;
+		display: block;
+		border: none;
+		border-radius: 0;
+		width: 100%;
+	}
+
+	.has-submenu:hover ul {
+		animation: none;
+	}
 }
