@@ -173,19 +173,6 @@ nav li a:active {
 	color: #fff;
 }
 
-.mobile-menu-icon {
-	background: url('images/nav.png') 0 0 no-repeat;
-	width: 30px;
-	height: 30px;
-	float: right;
-	margin: 10px 10px 0 0;
-	cursor: pointer;
-}
-
-.mobile-menu-icon.open {
-	background-image: url('images/cross.png')
-}
-
 .header {
 	background-color: #DCDCDC;
 	margin-top: 50px;
@@ -299,8 +286,44 @@ nav li a:active {
 	transform: rotate(-45deg) scale(1.5,1.5);
 }
 
-.footer {
-  margin: 2em;
+footer ul {
+	float: left;
+	margin: 0 5% 50px 0;
+}
+
+footer .footer__list-header {
+	text-transform: uppercase;
+	color: #333;
+	margin-bottom: 30px;
+	font-size: 1em;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+footer a {
+	color: #333;
+}
+
+footer li, footer p {
+	color: #4D4D4D;
+	line-height: 30px;
+}
+
+footer ul {
+	width: 28%;
+}
+
+footer li {
+	margin-bottom: 10px;
+}
+
+footer .icon {
+	font-size: 1.5em;
+	margin-right: 3%;
+	transition: .35 color linear;
+}
+
+footer .icon:hover {
+	color: #754336;
 }
 
 @media screen and (max-width: 1023px) {
@@ -325,6 +348,7 @@ nav li a:active {
 @media screen and (max-width: 800px) {
 	nav {
 		position: absolute;
+		box-shadow: 0 10px grey;
 	}
 
 	.nav-links {
@@ -368,5 +392,18 @@ nav li a:active {
 
 	.has-submenu:hover ul {
 		animation: none;
+	}
+
+	.mobile-menu-icon {
+		background: url('images/nav.png') 0 0 no-repeat;
+		width: 30px;
+		height: 30px;
+		float: right;
+		margin: 10px 10px 0 0;
+		cursor: pointer;
+	}
+
+	.mobile-menu-icon.open {
+		background-image: url('images/cross.png')
 	}
 }
